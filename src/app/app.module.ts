@@ -10,9 +10,12 @@ import { LoginPage } from '../pages/login/login';
 import { ResultRoutesPage } from '../pages/result-routes/result-routes';
 import { RouteRealTimePage } from '../pages/route-real-time/route-real-time';
 
-
+import { Geolocation } from '@ionic-native/geolocation';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { RestApiService } from '../providers/rest-api-service';
+import { HttpModule } from '@angular/http';
+import { Http } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -43,6 +47,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    RestApiService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
