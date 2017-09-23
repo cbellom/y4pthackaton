@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Search Route
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+  <form id="searchRoute-form3">
+    <ion-item id="searchRoute-input5">
+      <ion-label>
+        From Position
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item id="searchRoute-input6">
+      <ion-label>
+        To Position
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+  </form>
+  <button id="searchRoute-button4" ion-button color="positive" block on-click="goToResultRoutes()">
+    Search
+  </button>
+  <div id="searchRoute-container1">
+    <h3 id="searchRoute-heading1" style="color:#000000;">
+      History
+    </h3>
+    <ion-card id="searchRoute-card21">
+      <ion-list>
+        <ion-item color="none" id="searchRoute-list-item26">
+          <ion-thumbnail item-left>
+            <img src="assets/img/mZweDwSiOscr0gBpPxgY_Screenshot_1.png" />
+          </ion-thumbnail>
+          <h2>
+            From Point A To B
+          </h2>
+        </ion-item>
+        <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+          <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+        </div>
+        <ion-item id="searchRoute-list-item-container2">
+          <div id="searchRoute-markdown2" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;">
+              Some friendly
+              <strong>
+                Bicycle
+              </strong>
+            </p>
+          </div>
+        </ion-item>
+        <ion-card id="searchRoute-card22">
+          <ion-list>
+            <ion-item color="none" id="searchRoute-list-item31">
+              <ion-thumbnail item-left>
+                <img src="assets/img/SYGFxO15RpWLiUz5Gpwc_Screenshot_2.png" />
+              </ion-thumbnail>
+              <h2>
+                From Point C To D
+              </h2>
+            </ion-item>
+            <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+              <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+            </div>
+            <ion-item id="searchRoute-list-item-container4">
+              <div id="searchRoute-markdown4" class="show-list-numbers-and-dots">
+                <p style="margin-top:0px;color:#000000;">
+                  Some friendly
+                  <strong>
+                    public transport
+                  </strong>
+                </p>
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

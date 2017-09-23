@@ -1,10 +1,15 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { MapPage } from '../pages/map/map';
+import { SearchRoutePage } from '../pages/search-route/search-route';
+import { ReportPage } from '../pages/report/report';
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { LoginPage } from '../pages/login/login';
+import { ResultRoutesPage } from '../pages/result-routes/result-routes';
+import { RouteRealTimePage } from '../pages/route-real-time/route-real-time';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,18 +17,28 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
+    MapPage,
+    SearchRoutePage,
+    ReportPage,
+    TabsControllerPage,
+    LoginPage,
+    ResultRoutesPage,
+    RouteRealTimePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
+    MapPage,
+    SearchRoutePage,
+    ReportPage,
+    TabsControllerPage,
+    LoginPage,
+    ResultRoutesPage,
+    RouteRealTimePage
   ],
   providers: [
     StatusBar,
