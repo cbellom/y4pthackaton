@@ -1,3 +1,28 @@
 page-login {
+  ion-content{
+    background-image: url("../assets/img/bg.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+  ion-select{
+    text-align: center !important;
+    max-width: 90% !important;
+    color: white !important;
+    border-bottom: 1px solid #32db64;
+    text-align: center;
+  }
+  form{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  input{
+    color: white !important;
+    text-align: center;
+  }
 
+  ion-input{
+    border-bottom: 1px solid #32db64;
+  }
 }

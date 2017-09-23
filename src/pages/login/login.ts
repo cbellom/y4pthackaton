@@ -8,8 +8,9 @@ import { TabsControllerPage } from '../tabs-controller/tabs-controller';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-
+  public code:string;
   constructor(public navCtrl: NavController) {
+    this.code = "+57";
   }
 
   goToMap(params){

@@ -6,25 +6,35 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page5">
+
   <form id="login-form1">
 
     <ion-grid>
       <ion-row>
-        <ion-col>
-          <ion-input type="number" placeholder=""></ion-input>
+        <ion-col col-4>
+          <ion-select >
+            <ion-option value="55">+55</ion-option>
+            <ion-option value="56">+56</ion-option>
+            <ion-option value="57" selected >+57</ion-option>
+            <ion-option value="58">+58</ion-option>
+            <ion-option value="59">+59</ion-option>
+          </ion-select>
         </ion-col>
-        <ion-col>
-          <ion-input type="number" placeholder=""></ion-input>
+        <ion-col col-8>
+          <ion-input type="number" placeholder="Phone Number"></ion-input>
         </ion-col>
       </ion-row>
 
       <ion-row>
-        <button id="login-button1" ion-button color="primary" block on-click="goToMap()">
+        <br/>
+      </ion-row>
+      <ion-row>
+        <button id="login-button1" ion-button color="light" block on-click="goToMap()">
           Ingresar
         </button>
       </ion-row>
       <ion-row>
-        <button id="login-button2" ion-button clear color="light" block on-click="goToRegister()">
+        <button id="login-button2" ion-button clear color="secondary" block on-click="goToRegister()">
           Registrate
         </button>
       </ion-row>

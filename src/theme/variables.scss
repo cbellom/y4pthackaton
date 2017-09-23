@@ -41,7 +41,6 @@ $colors: (
   dark:       #222,
 );
 
-$background-color: #333232;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -71,7 +70,7 @@ $background-color: #333232;
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.dark";
+@import "ionic.theme.default";
 
 
 // Ionicons
