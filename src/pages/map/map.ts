@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
-import { RestApiService } from '../../providers/rest-api-service';
+import { RestApiService } from '../../providers/rest/rest-api-service';
 
 declare var google;
 

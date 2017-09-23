@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Search Route
+      Busca tu mejor opción
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -12,21 +12,21 @@
 <ion-content padding id="page3">
   <form id="searchRoute-form3">
     <ion-item id="searchRoute-input5">
-      <ion-input type="text" placeholder="Initial position"></ion-input>
+      <ion-input type="text" placeholder="Desde"></ion-input>
     </ion-item>
     <ion-item id="searchRoute-input6">
-      <ion-input type="text" placeholder="Final position"></ion-input>
+      <ion-input type="text" placeholder="Hasta"></ion-input>
     </ion-item>
   </form>
   <br/>
   <br/>
   <button id="searchRoute-button4" ion-button color="positive" block on-click="goToResultRoutes()">
-    Search
+    Buscar
   </button>
 
   <div padding id="page3">
     <h3 id="searchRoute-heading1" style="color:#000000;">
-      History
+      Historial
     </h3>
 
     <ion-card *ngFor="let item of points">
@@ -41,7 +41,7 @@
           </ion-item>
           <ion-item id="searchRoute-list-item-container2">
               <p style="margin-top:0px;color:#000000;">
-                By
+                Medios de transporte:
                 <strong>
                   {{item.type}}
                 </strong>

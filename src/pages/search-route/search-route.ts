@@ -1,20 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ResultRoutesPage } from '../result-routes/result-routes';
+import { ProfileProvider } from '../../providers/profile/profile';
 
 @Component({
   selector: 'page-search-route',
   templateUrl: 'search-route.html'
 })
 export class SearchRoutePage {
-  public points : any = [
-    {title: "from University to House", type:"Bicycle + Walk"},
-    {title: "from University to Work", type:"Walk"},
-    {title: "from Work to House", type:"Bicycle + Bus"},
-    {title: "from Work to Bar", type:"Bus"},
-  ];
+  public points : any = [];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private profileProvider: ProfileProvider) {
+    this.points = profileProvider.profile.historyRoutes;
   }
   goToResultRoutes(params){
     if (!params) params = {};

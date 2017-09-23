@@ -6,33 +6,33 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content id="side-menu21">
-    <ion-list id="menu-list3">
-      <ion-item color="dark" id="menu-list-item7">
+  <ion-content >
+    <ion-list >
+      <ion-item color="secondary" >
         <ion-avatar item-left>
-          <img />
+          <img src="{{profileProvider.profile.photo}}"/>
         </ion-avatar>
         <h2>
-          User Info
+          {{profileProvider.profile.name}}
         </h2>
       </ion-item>
     </ion-list>
-    <ion-list id="menu-list4">
-      <ion-item color="none" id="menu-list-item15">
+    <ion-list >
+      <ion-item color="none">
         <ion-icon name="settings" item-left></ion-icon>
-        Settings
+        Cuenta
       </ion-item>
-      <ion-item color="none" id="menu-list-item14">
+      <ion-item color="none">
         <ion-icon name="star" item-left></ion-icon>
-        Favorites
+        Favoritos
       </ion-item>
-      <ion-item color="none" id="menu-list-item16">
+      <ion-item color="none">
         <ion-icon name="information" item-left></ion-icon>
-        About
+        Mas informacion
       </ion-item>
-      <ion-item color="none" id="menu-list-item17" (click)="doLogout()">
+      <ion-item color="none" (click)="doLogout()">
         <ion-icon name="log-out" item-left></ion-icon>
-        Logout
+        Cerrar sesion
       </ion-item>
     </ion-list>
   </ion-content>

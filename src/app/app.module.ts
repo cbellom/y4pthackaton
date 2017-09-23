@@ -13,9 +13,10 @@ import { RouteRealTimePage } from '../pages/route-real-time/route-real-time';
 import { Geolocation } from '@ionic-native/geolocation';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { RestApiService } from '../providers/rest-api-service';
+import { RestApiService } from '../providers/rest/rest-api-service';
 import { HttpModule } from '@angular/http';
 import { Http } from '@angular/http';
+import { ProfileProvider } from '../providers/profile/profile';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { Http } from '@angular/http';
     SplashScreen,
     Geolocation,
     RestApiService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProfileProvider
   ]
 })
 export class AppModule {}
