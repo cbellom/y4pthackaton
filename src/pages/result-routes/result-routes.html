@@ -11,7 +11,7 @@
 
 <ion-content padding >
 
-    <ion-card  on-click="goToRouteRealTime()" *ngFor="let option of results; let i=index">
+    <ion-card  on-click="goToRouteRealTime({optionRoute: option})" *ngFor="let option of results; let i=index">
 
       <ion-grid>
         <ion-row>

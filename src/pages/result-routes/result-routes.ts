@@ -20,6 +20,6 @@ export class ResultRoutesPage {
 
   goToRouteRealTime(params){
     if (!params) params = {};
-    this.navCtrl.push(RouteRealTimePage);
+    this.navCtrl.push(RouteRealTimePage, params);
   }
 }

@@ -21,9 +21,9 @@ export class DataMock {
                 {begin: "walk", end:"flag"}
               ],
               pros: [
-                "money",
-                "nature",
-                "health"
+                "logo-usd",
+                "leaf",
+                "medkit"
               ]
             },
             {
@@ -34,9 +34,9 @@ export class DataMock {
                 {begin: "bicycle", end:"flag"}
               ],
               pros: [
-                "money",
-                "nature",
-                "health"
+                "logo-usd",
+                "leaf",
+                "medkit"
               ]
             },
             {
@@ -93,7 +93,7 @@ export class DataMock {
                 {begin: "bus", end:"flag"},
               ],
               pros: [
-                "money"
+                "logo-usd"
               ]
             },
             {
@@ -123,9 +123,9 @@ export class DataMock {
                 {begin: "bicycle", end:"flag"}
               ],
               pros: [
-                "money",
-                "nature",
-                "health"
+                "logo-usd",
+                "leaf",
+                "medkit"
               ]
             },
             {
