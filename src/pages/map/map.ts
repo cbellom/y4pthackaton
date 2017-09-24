@@ -101,37 +101,59 @@ export class MapPage {
   showRoute(){
     let _this = this;
 
-    this.calculateAndDisplayRoute('bogota, universidad nacional', 'bogota, calima').then(response => {
-      if(response){
-        setInterval(function(){
-          let latLng = response.routes[0].overview_path[_this.frame];
-          _this.frame ++;
-          _this.heatmapData.pop();
-          _this.heatmapData.pop();
-          _this.heatmapData.pop();
+    var route1 = this.calculateAndDisplayRoute('bogota, universidad nacional', 'bogota, calima');
+    var route2 = this.calculateAndDisplayRoute('bogota, aeropuerto', 'bogota, centro');
+    var route3 = this.calculateAndDisplayRoute('bogota, centro', 'bogota, calle 75');
+    var route4 = this.calculateAndDisplayRoute('bogota, soacha', 'bogota, Universidad EAN');
 
-          _this.heatmapData.push(latLng);
-          _this.heatmapData.push(latLng);
-          _this.heatmapData.push(latLng);
-        }, 1000);
-      }
-    });
-
-    this.calculateAndDisplayRoute('bogota, aeropuerto', 'bogota, centro').then(response => {
-      if(response){
-        for (let entry of response.routes[0].overview_path) {
-          setTimeout(function () {
+    Promise.all([route1, route2, route3, route4]).then(results => {
+      console.log(results);
+        if(results){
+          setInterval(function(){
+            _this.frame ++;
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
+            _this.heatmapData.pop();
             _this.heatmapData.pop();
             _this.heatmapData.pop();
             _this.heatmapData.pop();
 
-            _this.heatmapData.push(entry);
-            _this.heatmapData.push(entry);
-            _this.heatmapData.push(entry);
+            if(results[0].routes[0].overview_path.length > _this.frame){
+              let latLng1 = results[0].routes[0].overview_path[_this.frame];
+              _this.heatmapData.push(latLng1);
+              _this.heatmapData.push(latLng1);
+              _this.heatmapData.push(latLng1);
+            }
 
-          }, 1000);
+            if(results[1].routes[0].overview_path.length > _this.frame){
+              let latLng2 = results[1].routes[0].overview_path[_this.frame];
+              _this.heatmapData.push(latLng2);
+              _this.heatmapData.push(latLng2);
+              _this.heatmapData.push(latLng2);
+            }
+
+            if(results[2].routes[0].overview_path.length > _this.frame){
+              let latLng3 = results[2].routes[0].overview_path[_this.frame];
+              _this.heatmapData.push(latLng3);
+              _this.heatmapData.push(latLng3);
+              _this.heatmapData.push(latLng3);
+            }
+
+            if(results[3].routes[0].overview_path.length > _this.frame){
+              let latLng4 = results[3].routes[0].overview_path[_this.frame];
+              _this.heatmapData.push(latLng4);
+              _this.heatmapData.push(latLng4);
+              _this.heatmapData.push(latLng4);
+            }
+
+          }, 500);
         }
-      }
     });
   }
 
