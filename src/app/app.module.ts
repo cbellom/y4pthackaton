@@ -11,12 +11,13 @@ import { ResultRoutesPage } from '../pages/result-routes/result-routes';
 import { RouteRealTimePage } from '../pages/route-real-time/route-real-time';
 
 import { Geolocation } from '@ionic-native/geolocation';
+import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestApiService } from '../providers/rest/rest-api-service';
 import { HttpModule } from '@angular/http';
-import { Http } from '@angular/http';
 import { ProfileProvider } from '../providers/profile/profile';
+import { LocationTrackerProvider } from '../providers/location/location-tracker';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,9 @@ import { ProfileProvider } from '../providers/profile/profile';
     StatusBar,
     SplashScreen,
     Geolocation,
+    BackgroundGeolocation,
     RestApiService,
+    LocationTrackerProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProfileProvider
   ]

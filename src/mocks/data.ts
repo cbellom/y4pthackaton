@@ -142,4 +142,13 @@ export class DataMock {
           ],
       },
     ];
+
+    static positionData : any = [
+      {latitude: 4.6400083,longitude: -74.0969877},
+      {latitude: 4.6420258,longitude: -74.1039908},
+      {latitude: 4.6420258,longitude: -74.1039908},
+      {latitude: 4.6340217,longitude: -74.0890898},
+      {latitude: 4.6340217,longitude: -74.0890898},
+      {latitude: 4.6420258,longitude: -74.1039908}
+    ]
 }
