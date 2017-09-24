@@ -13,7 +13,42 @@ export class DataMock {
             {title: "Desde Casa a Biblioteca", type:"Bicycle + Bus"},
             {title: "Desde Centro comercial a Casa", type:"Walk"},
           ],
-          searchedRoutes:[]},
+          searchedRoutes:[
+            {
+              time:"25 min",
+              money:"$0",
+              route: [
+                {begin: "walk", end:"flag"}
+              ],
+              pros: [
+                "money",
+                "nature",
+                "health"
+              ]
+            },
+            {
+              time:"20 min",
+              money:"$0",
+              route: [
+                {begin: "walk", end:"bicycle"},
+                {begin: "bicycle", end:"flag"}
+              ],
+              pros: [
+                "money",
+                "nature",
+                "health"
+              ]
+            },
+            {
+              time:"20 min",
+              money:"$2200",
+              route: [
+                {begin: "bus", end:"flag"}
+              ],
+              pros: [ ]
+            }
+          ],
+      },
       {
           name: "Pedro",
           photo: "assets/img/profile2.jpg",
@@ -21,7 +56,26 @@ export class DataMock {
             {title: "desde Compensar a Casa", type:"Bus"},
             {title: "desde CAD a Nietos", type:"Bus"},
           ],
-          searchedRoutes:[]
+          searchedRoutes:[
+            {
+              time:"10 min",
+              money:"$2200",
+              route: [
+                {begin: "bus", end:"flag"}
+              ],
+              pros: [
+                "time"
+              ]
+            },
+            {
+              time:"10 min",
+              money:"$2200",
+              route: [
+                {begin: "car", end:"flag"}
+              ],
+              pros: [ ]
+            },
+          ],
       },
       {
           name: "Maria",
@@ -31,7 +85,27 @@ export class DataMock {
             {title: "Desde Casa a Abuelita", type:"Caminar"},
             {title: "Desde Abuelita a Trabajo", type:"Caminar + Bus"}
           ],
-          searchedRoutes:[]
+          searchedRoutes:[
+            {
+              time:"30 min",
+              money:"$2200",
+              route: [
+                {begin: "bus", end:"flag"},
+              ],
+              pros: [
+                "money"
+              ]
+            },
+            {
+              time:"25 min",
+              money:"$4400",
+              route: [
+                {begin: "bus", end:"bus"},
+                {begin: "bus", end:"flag"}
+              ],
+              pros: [  ]
+            },
+          ],
       },
       {
           name: "Edwin",
@@ -41,7 +115,31 @@ export class DataMock {
             {title: "Desde Casa a Centro comercial", type:"Caminar"},
             {title: "Desde Trabajo a Casa", type:"Cicla"}
           ],
-          searchedRoutes:[]
+          searchedRoutes:[
+            {
+              time:"40 min",
+              money:"$0",
+              route: [
+                {begin: "bicycle", end:"flag"}
+              ],
+              pros: [
+                "money",
+                "nature",
+                "health"
+              ]
+            },
+            {
+              time:"20 min",
+              money:"$2200",
+              route: [
+                {begin: "bus", end:"bicycle"},
+                {begin: "bicycle", end:"flag"}
+              ],
+              pros: [
+                "time"
+              ]
+            }
+          ],
       },
     ];
 }

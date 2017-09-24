@@ -8,23 +8,35 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page6">
-  <ion-list id="resultRoutes-list5">
-    <ion-item color="none" on-click="goToRouteRealTime()" id="resultRoutes-list-item11">
-      <ion-icon name="walk" item-left></ion-icon>
-      Item 1
-    </ion-item>
-    <ion-item color="none" on-click="goToRouteRealTime()" id="resultRoutes-list-item12">
-      <ion-icon name="bicycle" item-left></ion-icon>
-      Item 2
-    </ion-item>
-    <ion-item color="none" on-click="goToRouteRealTime()" id="resultRoutes-list-item13">
-      <ion-icon name="bus" item-left></ion-icon>
-      Item 3
-    </ion-item>
-    <ion-item color="none" on-click="goToRouteRealTime()" id="resultRoutes-list-item18">
-      <ion-icon name="car" item-left></ion-icon>
-      Item
-    </ion-item>
-  </ion-list>
+
+<ion-content padding >
+
+    <ion-card  on-click="goToRouteRealTime()" *ngFor="let option of results; let i=index">
+
+      <ion-grid>
+        <ion-row>
+
+            <ion-col col-8>
+              <ion-row *ngFor="let stepRoute of option.route">
+                <ion-col col-4>
+                  <ion-icon name="{{stepRoute.begin}}"></ion-icon>
+                </ion-col>
+                <ion-col col-4>
+                  <ion-icon name="arrow-round-forward"></ion-icon>
+                </ion-col>
+                <ion-col col-4>
+                  <ion-icon name="{{stepRoute.end}}"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col col-4 style="display: grid;">
+              <p> Tiempo: {{option.time}} </p>
+              <p> Dinero: {{option.money}} </p>
+            </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-card>
+
 </ion-content>
