@@ -1,3 +1,13 @@
 page-report {
+  .scroll-content{
+    background-image: url("../assets/img/bg.png");
+    padding: 0px !important;
+  }
 
+  .buttons{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding: 15px;
+  }
 }

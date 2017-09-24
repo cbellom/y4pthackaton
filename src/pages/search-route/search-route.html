@@ -9,46 +9,48 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding id="page3">
-  <form id="searchRoute-form3">
-    <ion-item id="searchRoute-input5">
-      <ion-input type="text" placeholder="Desde"></ion-input>
-    </ion-item>
-    <ion-item id="searchRoute-input6">
-      <ion-input type="text" placeholder="Hasta"></ion-input>
-    </ion-item>
-  </form>
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+        <ion-input type="text" placeholder="Desde"></ion-input>
+    </ion-row>
+    <ion-row>
+        <ion-input type="text" placeholder="Hasta"></ion-input>
+    </ion-row>
+  </ion-grid>
+
   <br/>
   <br/>
-  <button id="searchRoute-button4" ion-button color="positive" block on-click="goToResultRoutes()">
+  <button id="searchRoute-button4" ion-button color="secondary" block on-click="goToResultRoutes()">
     Buscar
   </button>
 
-  <div padding id="page3" style="background-color: #3c3b3b">
-    <h3 id="searchRoute-heading1" style="color:#fff;">
+  <br/>
+  <br/>
+  
+  <div padding>
+    <h3 style="color:white;" >
       Historial
     </h3>
 
-    <ion-card *ngFor="let item of points">
-      <ion-list>
-          <ion-item id="searchRoute-list-item26">
-            <ion-thumbnail item-left>
-              <img src="assets/img/mZweDwSiOscr0gBpPxgY_Screenshot_1.png" />
-            </ion-thumbnail>
-            <h2 >
-              {{item.title}}
-            </h2>
-          </ion-item>
-          <ion-item id="searchRoute-list-item-container2">
-              <p style="margin-top:0px;color:#000000;">
-                Medios de transporte:
-                <strong>
-                  {{item.type}}
-                </strong>
-              </p>
-          </ion-item>
-      </ion-list>
-    </ion-card>
+    <ion-list >
+      <ion-item *ngFor="let item of points" class="history">
+        <ion-avatar item-left>
+            <img src="assets/img/mZweDwSiOscr0gBpPxgY_Screenshot_1.png" />
+        </ion-avatar>
+        <h2>
+          {{item.title}}
+          <br/>
+          <p >
+            Medios de transporte:
+            <strong>
+              {{item.type}}
+            </strong>
+          </p>
+        </h2>
+      </ion-item>
+    </ion-list>
 
   </div>
 

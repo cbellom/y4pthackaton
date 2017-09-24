@@ -1,3 +1,25 @@
 page-search-route {
 
+    .scroll-content{
+      background-image: url("../assets/img/bg.png");
+    }
+
+    input{
+      color: white !important;
+      text-align: center;
+    }
+
+    ion-input{
+      border-bottom: 1px solid #32db64;
+    }
+
+    .history{
+      background: transparent;
+      color: white;
+      border-bottom: 0.55px solid #c8c7cc;
+
+      .item-inner{
+        border-bottom: none !important;
+      }
+    }
 }
