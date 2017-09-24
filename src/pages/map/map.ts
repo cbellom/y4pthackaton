@@ -124,28 +124,28 @@ export class MapPage {
             _this.heatmapData.pop();
             _this.heatmapData.pop();
 
-            if(results[0].routes[0].overview_path.length > _this.frame){
+            if(results[0] && results[0].routes[0].overview_path.length > _this.frame){
               let latLng1 = results[0].routes[0].overview_path[_this.frame];
               _this.heatmapData.push(latLng1);
               _this.heatmapData.push(latLng1);
               _this.heatmapData.push(latLng1);
             }
 
-            if(results[1].routes[0].overview_path.length > _this.frame){
+            if(results[1] && results[1].routes[0].overview_path.length > _this.frame){
               let latLng2 = results[1].routes[0].overview_path[_this.frame];
               _this.heatmapData.push(latLng2);
               _this.heatmapData.push(latLng2);
               _this.heatmapData.push(latLng2);
             }
 
-            if(results[2].routes[0].overview_path.length > _this.frame){
+            if(results[2] && results[2].routes[0].overview_path.length > _this.frame){
               let latLng3 = results[2].routes[0].overview_path[_this.frame];
               _this.heatmapData.push(latLng3);
               _this.heatmapData.push(latLng3);
               _this.heatmapData.push(latLng3);
             }
 
-            if(results[3].routes[0].overview_path.length > _this.frame){
+            if(results[3] && results[3].routes[0].overview_path.length > _this.frame){
               let latLng4 = results[3].routes[0].overview_path[_this.frame];
               _this.heatmapData.push(latLng4);
               _this.heatmapData.push(latLng4);
